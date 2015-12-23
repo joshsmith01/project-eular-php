@@ -19,10 +19,12 @@ while ( ($a + $b) < 4000000 ) {
 		$a = $b;
 		$b = $c;
 
-		echo 'C variable' . $c . '<br>';
+//		echo 'C variable' . $c . '<br>';
 		if ( (!($c % 2 ))) {
 			$total += $c;
 		}
-		echo 'Total variable ' . $total . '<br>';
+
 	}
+
 }
+echo 'Total variable ' . $total . '<br>';
