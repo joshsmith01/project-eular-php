@@ -8,20 +8,25 @@
 
 
 // This function will determine if the number is evenly divisible. If it is it will echo out the number.
-function isPrime( $n ) {
-	for( $i = 3; $i <= sqrt($n); $i++) {
-		if ( $n%$i == 0 ) {
+//
 
-			echo $i . '<br>';
+function isPrime($n) {
+	for($i=3; $i <= ceil($n/2); $i++) {
+		if( $n%$i == 0 ) {
+			return false;
 		}
 	}
-	echo 'hi';
+	return true;
 }
 
-$a = 13195;
-isPrime( $a );
 
-//foreach ( range(1, $a)  as $num) {
-//	echo gmp_strval(gmp_nextprime( $num ) ) . '<br>';
-//}
-?>
+$a = 13195;
+for($i=3; $i <= floor($a/2); $i = $i + 2) {
+	if($a % $i == 0 ) {
+		$y = $a / $i;
+		if(isPrime($y)) {
+			echo $y.PHP_EOL;
+			break;
+		}
+	}
+}
