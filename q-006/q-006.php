@@ -1,3 +1,4 @@
+<h1>Question 006</h1>
 <?php
 /*
 The sum of the squares of the first ten natural numbers is,
