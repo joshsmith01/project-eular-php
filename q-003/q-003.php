@@ -9,7 +9,7 @@
 
 // This function will determine if the number is evenly divisible. The function only returns true or false depending on whether or not the number supplied is a prime number or not.
 
-$rustart = getrusage();
+//$rustart = getrusage();
 
 
 
@@ -39,16 +39,16 @@ for($i=3; $i <= floor($a/2); $i = $i + 2) {
 
 
 
-
-
-// Script end
-function rutime( $ru, $rus, $index ) {
-	return ( $ru["ru_$index.tv_sec"] * 1000 + intval( $ru["ru_$index.tv_usec"] / 1000 ) )
-	       - ( $rus["ru_$index.tv_sec"] * 1000 + intval( $rus["ru_$index.tv_usec"] / 1000 ) );
-}
-
-$ru = getrusage();
-echo "This process used " . rutime( $ru, $rustart, "utime" ) .
-     " ms for its computations\n";
-echo "It spent " . rutime( $ru, $rustart, "stime" ) .
-     " ms in system calls\n";
+//
+//
+//// Script end
+//function rutime( $ru, $rus, $index ) {
+//	return ( $ru["ru_$index.tv_sec"] * 1000 + intval( $ru["ru_$index.tv_usec"] / 1000 ) )
+//	       - ( $rus["ru_$index.tv_sec"] * 1000 + intval( $rus["ru_$index.tv_usec"] / 1000 ) );
+//}
+//
+//$ru = getrusage();
+//echo "This process used " . rutime( $ru, $rustart, "utime" ) .
+//     " ms for its computations\n";
+//echo "It spent " . rutime( $ru, $rustart, "stime" ) .
+//     " ms in system calls\n";
