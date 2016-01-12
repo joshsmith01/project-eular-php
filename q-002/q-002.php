@@ -7,24 +7,21 @@
 //
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-$a = 1;
-$b = 2;
-$c = 0;
+$a     = 1;
+$b     = 2;
+$c     = 0;
 $total = 2;
 
-while ( ($a + $b) < 4000000 ) {
-	for ( $i = 0; $i < 10; $i++) {
+while ( ( $a + $b ) < 4000000 ) {
 
-		$c = $a + $b ;
-		$a = $b;
-		$b = $c;
+
+	$c = $a + $b;
+	$a = $b;
+	$b = $c;
 
 //		echo 'C variable' . $c . '<br>';
-		if ( (!($c % 2 ))) {
-			$total += $c;
-		}
-
+	if ( ( ! ( $c % 2 ) ) ) {
+		$total += $c;
 	}
-
 }
 echo 'Total variable ' . $total . '<br>';
